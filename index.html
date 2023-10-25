@@ -103,8 +103,12 @@ iframe {
 	overflow: scroll;
 }
 
-.dropdown:hover .dropdown-content {
+/*.dropdown:hover .dropdown-content {
   display: block;
+}*/
+
+.show2 {
+	display: block;
 }
 
 .dropdown:hover .dropbtn {
@@ -119,8 +123,8 @@ iframe {
 <div class="title">Watershed Packaging - Employees Signatures:</div>
 
 <div id="myBtnContainer" class="dropdown">
-  <button class="dropbtn">Please choose an employee</button>
-  	<div class="dropdown-content">
+  <button onclick="myFunction()" class="dropbtn">Please choose an employee</button>
+  	<div id="myDropdown" class="dropdown-content">
  		<button class="btn active" onclick="filterSelection('all')"> Show all</button>
 		<button class="btn" onclick="filterSelection('a1')">Andrew Ploughman</button>
 		<button class="btn" onclick="filterSelection('a2')">Anna Wood</button>
@@ -239,6 +243,10 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show2");
+}
+
 <!-- Click anywhere to close menu -->
 
 window.onclick = function(event) {
@@ -247,8 +255,8 @@ window.onclick = function(event) {
     var i;
     for (i = 0; i < dropdowns.length; i++) {
       var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
+      if (openDropdown.classList.contains('show2')) {
+        openDropdown.classList.remove('show2');
       }
     }
   }
