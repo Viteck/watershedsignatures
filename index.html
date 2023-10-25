@@ -103,13 +103,13 @@ iframe {
 	overflow: scroll;
 }
 
-/*.dropdown:hover .dropdown-content {
-  display: block;
-}*/
-
 .show2 {
 	display: block;
 }
+
+/*.dropdown:hover .dropdown-content {
+  display: block;
+}*/
 
 .dropdown:hover .dropbtn {
   background-color: #706246;
@@ -247,20 +247,15 @@ function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show2");
 }
 
-<!-- Click anywhere to close menu -->
-
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show2')) {
-        openDropdown.classList.remove('show2');
-      }
-    }
+/*function myFunction() {
+  var x = document.getElementById("myDropdown");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
   }
-}
+}*/
+
 </script>
 
 </body>
