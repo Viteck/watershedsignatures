@@ -33,12 +33,6 @@ html, body {
 .col-9 {width: 90%;}
 .col-10 {width: 100%;}
 
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  [class*="col-"] {
-    width: 100%;
-  }
-}
 
 .top {
 	position: sticky;
@@ -73,9 +67,20 @@ iframe {
 
 .filterDiv {
 	display: none;
-	min-width: 367px;
+	width: 382px;
 	margin: 20px;
 }
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+.filterDiv {
+	width: 80%;
+}
+}
+
 iframe:hover {
 	transform: scale(1.01);
 }
