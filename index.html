@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>WS Employees Signatures</title>
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+
 <style>
-body {
+
+@keyframes zoom{
+	from {top:-40px; /*scale:0.5;*/ opacity:0;}
+	to {top:0px; /*scale:1;*/ opacity:1;}
+}
+
+html, body {
 	background-color: black;
+	height: 100%;
 }
 
 .top {
 	position: sticky;
 	top: 0;
+	z-index: 1;
 }
 
 .title {
@@ -44,7 +54,6 @@ iframe {
 .filterDiv {
 	display: none;
 }
-
 iframe:hover {
 	transform: scale(1.01);
 }
@@ -55,10 +64,26 @@ iframe:hover {
 
 .container {
   margin-top: 20px;
-  overflow: hidden;
+  overflow: auto;
   margin-left: 250px;
   margin-right: 250px;
   text-align:center;
+
+	position: relative;
+	animation-name: zoom;
+	animation-duration: 3s;
+	height: 88%;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.container {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 /* Style the buttons */
@@ -107,7 +132,7 @@ iframe:hover {
 	width: 240px;
 	background-color: #f9f9f9;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	z-index: 1;
+	//z-index: 1;
 	height: 500%;
 	overflow: scroll;
 }
