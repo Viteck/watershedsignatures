@@ -57,7 +57,7 @@ html, body {
 iframe {
 	border: none;
 	width: 100%;
-	height: 215px;
+	height: 100%;
 	padding: 5px 10px 5px 5px;
 	display: block;
     	background-color: white;
@@ -68,17 +68,8 @@ iframe {
 .filterDiv {
 	display: none;
 	width: 382px;
+	height: 215px;
 	margin: 20px;
-}
-
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  [class*="col-"] {
-    width: 100%;
-  }
-.filterDiv {
-	width: 80%;
-}
 }
 
 iframe:hover {
@@ -161,10 +152,6 @@ iframe:hover {
 	overflow: scroll;
 }
 
-.show2 {
-	display: block;
-}
-
 .dropdown:hover .dropdown-content {
   display: block;
 }
@@ -172,6 +159,21 @@ iframe:hover {
 .dropdown:hover .dropbtn {
   background-color: #706246;
 }
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+.filterDiv {
+	width: 80%;
+}
+.dropdown-content {
+	height: 100%;
+}
+
+}
+
 </style>
 
 </head>
@@ -183,7 +185,7 @@ iframe:hover {
 <div class="title">Watershed Packaging - Employees Signatures:</div>
 
 <div id="myBtnContainer" class="dropdown col-1">
-  <button onclick="myFunction()" class="dropbtn col-10">Please choose an employee</button>
+  <button class="dropbtn col-10">Please choose an employee</button>
   	<div id="myDropdown" class="dropdown-content col-1">
  		<button class="btn active" onclick="filterSelection('all')"> Show all</button>
 		<button class="btn" onclick="filterSelection('a1')">Andrew Ploughman</button>
@@ -300,19 +302,6 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
-
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show2");
-}
-
-/*function myFunction() {
-  var x = document.getElementById("myDropdown");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}*/
 
 </script>
 
