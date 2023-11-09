@@ -152,12 +152,15 @@ iframe:hover {
 	overflow: scroll;
 }
 
+.dropdown:hover .dropbtn {
+  background-color: #706246;
+}
+
+@media only screen and (min-width: 768px) {
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-.dropdown:hover .dropbtn {
-  background-color: #706246;
 }
 
 @media only screen and (max-width: 768px) {
@@ -167,9 +170,14 @@ iframe:hover {
   }
 .filterDiv {
 	width: 80%;
+	scale: 80%;
 }
 .dropdown-content {
 	height: 100%;
+}
+
+.show2 {
+	display: block;
 }
 
 }
@@ -185,7 +193,7 @@ iframe:hover {
 <div class="title">Watershed Packaging - Employees Signatures:</div>
 
 <div id="myBtnContainer" class="dropdown col-1">
-  <button class="dropbtn col-10">Please choose an employee</button>
+  <button onclick="myFunction()" class="dropbtn col-10">Please choose an employee</button>
   	<div id="myDropdown" class="dropdown-content col-1">
  		<button class="btn active" onclick="filterSelection('all')"> Show all</button>
 		<button class="btn" onclick="filterSelection('a1')">Andrew Ploughman</button>
@@ -301,6 +309,11 @@ for (var i = 0; i < btns.length; i++) {
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
   });
+}
+
+function myFunction() {
+   var element = document.getElementById("myDropdown");
+   element.classList.toggle("show2");
 }
 
 </script>
