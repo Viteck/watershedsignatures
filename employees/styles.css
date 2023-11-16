@@ -2,10 +2,6 @@ p	{
 	font-family: Calibri;
 	font-size: 11pt;
 }
-a	{
-	text-decoration: none;
-	color: black;
-}
 a:visited {
 	text-decoration: none;
 	color: black;
@@ -51,8 +47,9 @@ table, td {
 .span	{
 	line-height: 85%;
 }
-.ho	{
-	padding-top: 4px;
+.ho img	{
+	//padding-top: 4px;
+	display: block;
 }
 .click-me {
 	font-size: 10pt;
